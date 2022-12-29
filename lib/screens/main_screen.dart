@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tigopesa_ui/utils/colors.dart';
+import '../utils/colors.dart';
 
 import '../pages/home_screen.dart';
 import '../pages/huduma.dart';
