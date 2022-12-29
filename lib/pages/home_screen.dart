@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../components/service_panel.dart';
+import '../components/slider_ad.dart';
 import '../widgets/custom_button.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -21,7 +22,8 @@ class _HomeScreenState extends State<HomeScreen> {
             child: CustomButton(
                 leading: true, tap: () {}, text: "Angalia Salio (bure)"),
           ),
-          const ServicePanel()
+          const ServicePanel(),
+          const AdvertisementPanel()
         ],
       ),
     );

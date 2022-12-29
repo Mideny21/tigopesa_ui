@@ -39,11 +39,10 @@ class _MainsScreenState extends State<MainsScreen> {
         title: 'TigoPesa',
         actions: [
           IconButton(
-              icon: const Icon(Icons.favorite_border_outlined,
-                  color: Colors.amber),
+              icon: const Icon(Icons.star_border_sharp, color: Colors.amber),
               onPressed: () {}),
           IconButton(
-              icon: const Icon(Icons.favorite_border_outlined,
+              icon: const Icon(Icons.bookmark_outline_outlined,
                   color: Colors.amber),
               onPressed: () {}),
         ],
