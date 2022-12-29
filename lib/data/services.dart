@@ -2,41 +2,55 @@ List<Map> services = [
   {
     "image": "assets/images/dstv.jpeg",
     "secondary": "assets/images/dstvlogo.jpeg",
-    "name": "Tuma Pesa"
+    "name": "Tuma Pesa",
+    "badge": false
   },
   {
     "image": "assets/images/uhuru na umoja.jpeg",
     "secondary": "assets/images/gepg.png",
-    "name": "Kulipia Bili"
+    "name": "Kulipia Bili",
+    "badge": false
   },
   {
     "image": "assets/images/mastaa shangwe.jpeg",
     "secondary": "assets/images/captain.jpeg",
-    "name": "Benki"
+    "name": "Benki",
+    "badge": false
   },
   {
     "image": "assets/images/vodabima.jpeg",
     "secondary": "assets/images/mpwa.png",
-    "name": "Kutoa Pesa"
+    "name": "Kutoa Pesa",
+    "badge": false
   },
   {
     "image": "assets/images/dstv.jpeg",
     "secondary": "assets/images/dstvlogo.jpeg",
-    "name": "Malipo ya Serikali"
+    "name": "Malipo ya Serikali",
+    "badge": false
   },
   {
     "image": "assets/images/dstv.jpeg",
     "secondary": "assets/images/dstvlogo.jpeg",
-    "name": "Duka La tigo"
+    "name": "Lipa Kwa Simu",
+    "badge": true
   },
   {
     "image": "assets/images/dstv.jpeg",
     "secondary": "assets/images/dstvlogo.jpeg",
-    "name": "Tuma Nje ya Nchi"
+    "name": "Duka La tigo",
+    "badge": false
   },
   {
     "image": "assets/images/dstv.jpeg",
     "secondary": "assets/images/dstvlogo.jpeg",
-    "name": "Huduma za Kifedha"
+    "name": "Tuma Nje ya Nchi",
+    "badge": false
+  },
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "Huduma za Kifedha",
+    "badge": true
   },
 ];

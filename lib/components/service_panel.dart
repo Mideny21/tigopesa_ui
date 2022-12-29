@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 
 import '../data/services.dart';
@@ -26,7 +27,7 @@ class ServicePanel extends StatelessWidget {
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 1.0,
                   child: Card(
-                    elevation: 0,
+                    elevation: 2,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Column(
@@ -43,6 +44,25 @@ class ServicePanel extends StatelessWidget {
                     ),
                   ),
                 ),
+                services[index]['badge'] == true
+                    ? Positioned(
+                        top: -4,
+                        right: 0,
+                        child: Container(
+                          height: 45,
+                          decoration: const BoxDecoration(
+                              color: Colors.red, shape: BoxShape.circle),
+                          child: Center(
+                              child: Text(
+                            "MPYA",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontSize: 10,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          )),
+                        ))
+                    : Container()
               ],
             ),
           );
