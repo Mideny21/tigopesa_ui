@@ -8,6 +8,7 @@ class CustomButton extends StatelessWidget {
   final VoidCallback tap;
   final String text;
   final bool leading;
+  final Color textColor;
 
   final Color color;
   const CustomButton({
@@ -15,6 +16,7 @@ class CustomButton extends StatelessWidget {
     required this.tap,
     required this.text,
     this.leading = false,
+    this.textColor = Colors.blueGrey,
     this.color = AppColors.yellowColors,
   }) : super(key: key);
 
@@ -35,7 +37,7 @@ class CustomButton extends StatelessWidget {
         label: Text(text,
             style: TextStyle(
                 fontSize: 16,
-                color: Colors.blueGrey[700],
+                color: textColor,
                 // fontWeight: FontWeight.bold,
                 letterSpacing: 0.8)),
         icon: leading

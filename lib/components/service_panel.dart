@@ -1,7 +1,9 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
+import 'package:tigo_pesa/utils/helpers.dart';
 
 import '../data/services.dart';
+import '../pages/tuma_pesa.dart';
 
 class ServicePanel extends StatelessWidget {
   const ServicePanel({super.key});
@@ -26,20 +28,30 @@ class ServicePanel extends StatelessWidget {
               children: [
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 1.0,
-                  child: Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Image.asset(services[index]['image'],
-                              height: 40, fit: BoxFit.cover),
-                          const SizedBox(height: 10),
-                          Text(services[index]['name'],
-                              overflow: TextOverflow.ellipsis),
-                        ],
+                  child: InkWell(
+                    onTap: () {
+                      switch (services[index]['name']) {
+                        case 'Tuma Pesa':
+                          nextScreen(context, const TumePesaScreen());
+                          break;
+                        default:
+                      }
+                    },
+                    child: Card(
+                      elevation: 2,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Image.asset(services[index]['image'],
+                                height: 40, fit: BoxFit.cover),
+                            const SizedBox(height: 10),
+                            Text(services[index]['name'],
+                                overflow: TextOverflow.ellipsis),
+                          ],
+                        ),
                       ),
                     ),
                   ),
