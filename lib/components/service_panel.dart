@@ -5,6 +5,7 @@ import 'package:tigo_pesa/utils/helpers.dart';
 import 'package:tigo_pesa/widgets/custom_button.dart';
 
 import '../data/services.dart';
+import '../pages/benki/choosebank.dart';
 import '../pages/tuma_pesa.dart';
 
 class ServicePanel extends StatefulWidget {
@@ -15,16 +16,6 @@ class ServicePanel extends StatefulWidget {
 }
 
 class _ServicePanelState extends State<ServicePanel> {
-  var paymentProviders = [
-    {"text": "Vodacom", "value": 1, "image": "assets/images/mpesa.png"},
-    // {"text": "Airtel Money", "value": 1, "image": "assets/images/airtel.jpg"},
-  ];
-
-  var selectedProvider = {
-    "text": "Vodacom",
-    "value": 1,
-    "image": "assets/images/mpesa.png"
-  };
 
   String dropdownValue = 'Tigo Pesa';
   @override
@@ -58,6 +49,9 @@ class _ServicePanelState extends State<ServicePanel> {
                           break;
                         case 'Lipa Kwa Simu':
                           lipaKwaSimuDialog(context);
+                          break;
+                        case 'Benki':
+                          nextScreen(context, const ChaguaBank());
                           break;
                         default:
                       }
