@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../utils/colors.dart';
 import '../../widgets/appBar.dart';
 import '../../widgets/custom_button.dart';
+import 'listofbanks.dart';
 
 class TigoPesaKwendaBenki extends StatefulWidget {
   const TigoPesaKwendaBenki({super.key});
@@ -12,6 +13,8 @@ class TigoPesaKwendaBenki extends StatefulWidget {
 }
 
 class _TigoPesaKwendaBenkiState extends State<TigoPesaKwendaBenki> {
+  String? selectedBank;
+
   @override
   void initState() {
     super.initState();
@@ -41,70 +44,88 @@ class _TigoPesaKwendaBenkiState extends State<TigoPesaKwendaBenki> {
               elevation: 8,
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Stack(
+                child: Column(
                   // alignment: Alignment.topCenter,
 
                   children: [
-                    Positioned(
-                      top: 0,
-                      right: 0,
-                      left: 0,
-                      child: Text(
-                          "Tuma Pesa kwenda mitandao yote. Ingiza namba au chagua kutoka kwenye orodha ya simu yako."),
-                    ),
-                    Positioned(
-                      top: 50,
-                      right: 0,
-                      left: 0,
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Expanded(
+                    Text(
+                        "Tuma Pesa kwenda mitandao yote. Ingiza namba au chagua kutoka kwenye orodha ya simu yako."),
+                    SizedBox(height: 20),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Expanded(
                             flex: 2,
-                            child: const InputForms(
-                                title: "Chagua benki", text: "Chagua benki"),
-                          ),
-                          const SizedBox(width: 10),
-                          Expanded(
-                              flex: 1,
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(vertical: 3.0),
-                                child: CustomButton(
-                                    color: AppColors.primaryColor,
-                                    tap: () {},
-                                    textColor: Colors.white,
-                                    text: "CHAGUA"),
-                              ))
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                    Positioned(
-                      top: 140,
-                      right: 0,
-                      left: 0,
-                      child: InputForms(
-                          title: "Akaunti Namba",
-                          text: "Ingiza namba ya akaunti"),
-                    ),
-                    const SizedBox(height: 5),
-                    Positioned(
-                      top: 230,
-                      right: 0,
-                      left: 0,
-                      child: InputForms(
-                          title: "Kiasi", text: "Ingiza kiasi cha kutuma"),
+                            child: SizedBox(
+                              height: 74,
+                              child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text("Chagua benki"),
+                                    SizedBox(height: 5),
+                                    Container(
+                                      height: 47,
+                                      width: MediaQuery.of(context).size.width,
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(5),
+                                          border: Border.all(
+                                              color: AppColors.primaryColor,
+                                              width: 2)),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(12.0),
+                                        child: Text(selectedBank == null
+                                            ? 'Chagua Benki'
+                                            : selectedBank!),
+                                      ),
+                                    )
+                                  ]),
+                            )),
+                        const SizedBox(width: 10),
+                        Expanded(
+                            flex: 1,
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 3.0),
+                              child: CustomButton(
+                                  color: AppColors.primaryColor,
+                                  tap: () async {
+                                    final selectedBankValue =
+                                        await Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                          builder: (ctx) =>
+                                              const ListOfBankScreen()),
+                                    );
+                                    setState(() {
+                                      selectedBank = selectedBankValue;
+                                    });
+                                  },
+                                  textColor: Colors.white,
+                                  text: "CHAGUA"),
+                            ))
+                      ],
                     ),
 
+                    SizedBox(height: 20),
+
+                    InputForms(
+                        title: "Akaunti Namba",
+                        text: "Ingiza namba ya akaunti"),
+
+                    SizedBox(height: 20),
+
+                    InputForms(title: "Kiasi", text: "Ingiza kiasi cha kutuma"),
+                    SizedBox(height: 20),
+                    InputForms(
+                        title: "Maelezo", text: "Ingiza maelezo ya muamala"),
+                    SizedBox(height: 20),
                     // const SizedBox(height: 200),
-                    Align(
-                        alignment: Alignment.bottomCenter,
-                        child: CustomButton(
-                            textColor: Colors.white,
-                            color: Colors.green,
-                            tap: () {},
-                            text: "ENDELEA"))
+                    CustomButton(
+                        textColor: Colors.white,
+                        color: Colors.green,
+                        tap: () {},
+                        text: "ENDELEA")
                   ],
                 ),
               )),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tigo_pesa/utils/colors.dart';
 
 class MyAppBar extends StatelessWidget with PreferredSizeWidget {
   final String? title;
@@ -13,7 +14,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: AppColors.primaryColor,
       title: Text(title!),
       actions: actions,
     );

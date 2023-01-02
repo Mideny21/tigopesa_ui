@@ -67,7 +67,7 @@ class _MainsScreenState extends State<MainsScreen> {
         showSelectedLabels: true,
         showUnselectedLabels: true,
         unselectedLabelStyle: const TextStyle(color: Colors.white),
-        backgroundColor: Colors.blue[900],
+        backgroundColor: AppColors.primaryColor,
         selectedIconTheme: const IconThemeData(color: AppColors.yellowColors),
         // type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.white,

@@ -6,6 +6,8 @@ import 'package:tigo_pesa/widgets/custom_button.dart';
 
 import '../data/services.dart';
 import '../pages/benki/choosebank.dart';
+import '../pages/chagua_bill.dart';
+import '../pages/toa_pesa.dart';
 import '../pages/tuma_pesa.dart';
 
 class ServicePanel extends StatefulWidget {
@@ -16,7 +18,6 @@ class ServicePanel extends StatefulWidget {
 }
 
 class _ServicePanelState extends State<ServicePanel> {
-
   String dropdownValue = 'Tigo Pesa';
   @override
   Widget build(BuildContext context) {
@@ -52,6 +53,12 @@ class _ServicePanelState extends State<ServicePanel> {
                           break;
                         case 'Benki':
                           nextScreen(context, const ChaguaBank());
+                          break;
+                        case 'Kutoa Pesa':
+                          nextScreen(context, const ToaPesaScreen());
+                          break;
+                        case 'Kulipia Bili':
+                          nextScreen(context, const ChaguaBillScreen());
                           break;
                         default:
                       }

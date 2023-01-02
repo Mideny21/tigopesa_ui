@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tigo_pesa/utils/colors.dart';
 
 import '../components/service_panel.dart';
 import '../components/slider_ad.dart';
@@ -20,7 +21,10 @@ class _HomeScreenState extends State<HomeScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
             child: CustomButton(
-                leading: true, tap: () {}, text: "Angalia Salio (bure)"),
+                color: AppColors.yellowColors,
+                leading: true,
+                tap: () {},
+                text: "Angalia Salio (bure)"),
           ),
           const ServicePanel(),
           const AdvertisementPanel()

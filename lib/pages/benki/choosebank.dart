@@ -64,11 +64,8 @@ class BankChoiceCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
-                  icon,
-                  size: 40,
-                ),
-                SizedBox(height: 5),
+                Icon(icon, size: 40),
+                const SizedBox(height: 5),
                 Text(title)
               ],
             )),
