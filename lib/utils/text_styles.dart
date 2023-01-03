@@ -9,4 +9,4 @@ var containerstyle = BoxDecoration(
     color: tigoPesaLightBlue,
     borderRadius: BorderRadius.circular(3),
     border:
-        Border.all(color: AppColors.primaryColor.withOpacity(0.4), width: 2));
+        Border.all(color: AppColors.primaryColor.withOpacity(0.7), width: 1));

@@ -45,6 +45,8 @@ class _BenkiKwendaTigoPesaState extends State<BenkiKwendaTigoPesa> {
                       Container(
                         decoration: containerstyle,
                         child: DropdownButtonFormField<String>(
+                          icon:
+                              Icon(Icons.keyboard_arrow_down_rounded, size: 26),
                           value: dropdownValue,
                           hint: const Text(
                             'Chagua Benki',

@@ -66,6 +66,10 @@ class _TumaKwendaNjeScreenState extends State<TumaKwendaNjeScreen> {
                           Container(
                             decoration: containerstyle,
                             child: DropdownButtonFormField<String>(
+                              icon: Icon(
+                                Icons.keyboard_arrow_down_rounded,
+                                size: 26,
+                              ),
                               value: dropdownValue,
                               hint: const Text(
                                 'Chagua Nchi',
@@ -89,8 +93,9 @@ class _TumaKwendaNjeScreenState extends State<TumaKwendaNjeScreen> {
                               decoration: InputDecoration(
                                 fillColor:
                                     AppColors.primaryColor.withOpacity(0.4),
-                                hintStyle:
-                                    TextStyle(color: AppColors.primaryColor),
+                                hintStyle: TextStyle(
+                                    color: AppColors.primaryColor
+                                        .withOpacity(0.7)),
                                 border: InputBorder.none,
                                 focusedBorder: InputBorder.none,
                                 enabledBorder: InputBorder.none,
@@ -114,14 +119,12 @@ class _TumaKwendaNjeScreenState extends State<TumaKwendaNjeScreen> {
                           ),
                           const SizedBox(height: 5),
                           Container(
-                            decoration: BoxDecoration(
-                                color: tigoPesaLightBlue,
-                                borderRadius: BorderRadius.circular(5),
-                                border: Border.all(
-                                    color:
-                                        AppColors.primaryColor.withOpacity(0.4),
-                                    width: 2)),
+                            decoration: containerstyle,
                             child: DropdownButtonFormField<String>(
+                              icon: Icon(
+                                Icons.keyboard_arrow_down_rounded,
+                                size: 26,
+                              ),
                               value: dropdownValue,
                               hint: const Text(
                                 'Chagua Nchi',

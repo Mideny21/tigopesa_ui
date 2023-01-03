@@ -223,6 +223,7 @@ class _ServicePanelState extends State<ServicePanel> {
                 Container(
                   decoration: containerstyle,
                   child: DropdownButtonFormField<String>(
+                    icon: Icon(Icons.keyboard_arrow_down_rounded, size: 26),
                     value: dropdownValue,
                     hint: const Text(
                       'Chagua Malipo',
@@ -241,7 +242,8 @@ class _ServicePanelState extends State<ServicePanel> {
                       });
                     },
                     decoration: InputDecoration(
-                      hintStyle: TextStyle(color: AppColors.primaryColor),
+                      hintStyle: TextStyle(
+                          color: AppColors.primaryColor.withOpacity(0.7)),
                       border: InputBorder.none,
                       focusedBorder: InputBorder.none,
                       enabledBorder: InputBorder.none,

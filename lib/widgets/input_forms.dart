@@ -24,16 +24,12 @@ class InputForms extends StatelessWidget {
         ),
         const SizedBox(height: 5),
         Container(
-            decoration: BoxDecoration(
-                color: tigoPesaLightBlue,
-                borderRadius: BorderRadius.circular(3),
-                border: Border.all(
-                    color: AppColors.primaryColor.withOpacity(0.4), width: 2)),
+            decoration: containerstyle,
             child: TextFormField(
               decoration: InputDecoration(
                 hintText: text,
                 hintStyle:
-                    TextStyle(color: AppColors.primaryColor.withOpacity(0.8)),
+                    TextStyle(color: AppColors.primaryColor.withOpacity(0.7)),
                 border: InputBorder.none,
                 focusedBorder: InputBorder.none,
                 enabledBorder: InputBorder.none,

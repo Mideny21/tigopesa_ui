@@ -46,7 +46,7 @@ class CustomButton extends StatelessWidget {
                 letterSpacing: 0.8)),
         icon: leading
             ? Icon(Icons.account_balance_wallet_outlined,
-                color: Colors.blueGrey[700], size: 33)
+                color: AppColors.primaryColor, size: 33)
             : Container(),
       ),
     );
