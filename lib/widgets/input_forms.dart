@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../utils/colors.dart';
+import '../utils/text_styles.dart';
 
 class InputForms extends StatelessWidget {
   final String title;
@@ -17,16 +18,22 @@ class InputForms extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title),
+        Text(
+          title,
+          style: titleStyle,
+        ),
         const SizedBox(height: 5),
         Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                border: Border.all(color: AppColors.primaryColor, width: 2)),
+                color: tigoPesaLightBlue,
+                borderRadius: BorderRadius.circular(3),
+                border: Border.all(
+                    color: AppColors.primaryColor.withOpacity(0.4), width: 2)),
             child: TextFormField(
               decoration: InputDecoration(
                 hintText: text,
-                hintStyle: TextStyle(color: AppColors.primaryColor),
+                hintStyle:
+                    TextStyle(color: AppColors.primaryColor.withOpacity(0.8)),
                 border: InputBorder.none,
                 focusedBorder: InputBorder.none,
                 enabledBorder: InputBorder.none,

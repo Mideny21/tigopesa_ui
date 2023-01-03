@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:tigo_pesa/utils/colors.dart';
+import 'package:tigo_pesa/utils/text_styles.dart';
 import 'package:tigo_pesa/widgets/appBar.dart';
 
 import '../widgets/custom_button.dart';
@@ -45,39 +46,52 @@ class _KulipiaBillScreenState extends State<KulipiaBillScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                          "Hakikisha una kumbukumbu namba na unaingiza kiasi sahihi kufanya malipo"),
+                        "Hakikisha una kumbukumbu namba na unaingiza kiasi sahihi kufanya malipo",
+                        style: titleStyle,
+                      ),
 
                       const SizedBox(height: 20),
                       Text(
                         "Utalipa kwa:",
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 18),
                       ),
                       SizedBox(height: 10),
                       Row(
                         children: [
                           Container(
-                              height: 50,
-                              width: 50,
+                              height: 60,
+                              width: 60,
                               decoration: BoxDecoration(
                                   color: AppColors.yellowColors,
                                   shape: BoxShape.circle),
                               child: Center(
-                                child: Icon(
-                                  Icons.food_bank_outlined,
-                                  color: Colors.white,
-                                ),
+                                child: Icon(Icons.food_bank_outlined,
+                                    color: Colors.white, size: 38),
                               )),
                           const SizedBox(width: 15),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                widget.title,
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                              const SizedBox(height: 5),
-                              Text(widget.controlnumber)
-                            ],
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  widget.title,
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                      overflow: TextOverflow.ellipsis,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16),
+                                ),
+                                const SizedBox(height: 5),
+                                Text(
+                                  widget.controlnumber,
+                                  style: TextStyle(
+                                      overflow: TextOverflow.ellipsis,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 16),
+                                )
+                              ],
+                            ),
                           )
                         ],
                       ),

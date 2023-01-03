@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:tigo_pesa/utils/text_styles.dart';
 
 import '../../utils/colors.dart';
 import '../../widgets/appBar.dart';
 import '../../widgets/custom_button.dart';
+import '../../widgets/input_forms.dart';
 import 'listofbanks.dart';
 
 class TigoPesaKwendaBenki extends StatefulWidget {
@@ -32,7 +34,8 @@ class _TigoPesaKwendaBenkiState extends State<TigoPesaKwendaBenki> {
         title: 'Tuma kwenda benki',
         actions: [
           IconButton(
-              icon: const Icon(Icons.star_border_sharp, color: Colors.amber),
+              icon: const Icon(Icons.star_border_sharp,
+                  color: AppColors.yellowColors),
               onPressed: () {}),
         ],
       ),
@@ -45,11 +48,11 @@ class _TigoPesaKwendaBenkiState extends State<TigoPesaKwendaBenki> {
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Column(
-                  // alignment: Alignment.topCenter,
-
                   children: [
                     Text(
-                        "Tuma Pesa kwenda mitandao yote. Ingiza namba au chagua kutoka kwenye orodha ya simu yako."),
+                      "Tuma Pesa kwenda mitandao yote. Ingiza namba au chagua kutoka kwenye orodha ya simu yako.",
+                      style: titleStyle,
+                    ),
                     SizedBox(height: 20),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.end,
@@ -62,17 +65,15 @@ class _TigoPesaKwendaBenkiState extends State<TigoPesaKwendaBenki> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text("Chagua benki"),
+                                    Text(
+                                      "Chagua benki",
+                                      style: titleStyle,
+                                    ),
                                     SizedBox(height: 5),
                                     Container(
                                       height: 47,
                                       width: MediaQuery.of(context).size.width,
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(5),
-                                          border: Border.all(
-                                              color: AppColors.primaryColor,
-                                              width: 2)),
+                                      decoration: containerstyle,
                                       child: Padding(
                                         padding: const EdgeInsets.all(12.0),
                                         child: Text(selectedBank == null
@@ -131,45 +132,6 @@ class _TigoPesaKwendaBenkiState extends State<TigoPesaKwendaBenki> {
               )),
         ),
       ),
-    );
-  }
-}
-
-class InputForms extends StatelessWidget {
-  final String title;
-  final String text;
-
-  const InputForms({
-    Key? key,
-    required this.title,
-    required this.text,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(title),
-        const SizedBox(height: 5),
-        Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                border: Border.all(color: AppColors.primaryColor, width: 2)),
-            child: TextFormField(
-              decoration: InputDecoration(
-                hintText: text,
-                hintStyle: TextStyle(color: AppColors.primaryColor),
-                border: InputBorder.none,
-                focusedBorder: InputBorder.none,
-                enabledBorder: InputBorder.none,
-                errorBorder: InputBorder.none,
-                disabledBorder: InputBorder.none,
-                contentPadding:
-                    const EdgeInsets.only(left: 5, bottom: 5, top: 5, right: 5),
-              ),
-            )),
-      ],
     );
   }
 }

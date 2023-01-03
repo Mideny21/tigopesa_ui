@@ -2,6 +2,7 @@ import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:tigo_pesa/utils/colors.dart';
 import 'package:tigo_pesa/utils/helpers.dart';
+import 'package:tigo_pesa/utils/text_styles.dart';
 import 'package:tigo_pesa/widgets/custom_button.dart';
 
 import '../data/services.dart';
@@ -11,6 +12,7 @@ import '../pages/duka_la_tigo.dart';
 import '../pages/hudumaZaKifedha.dart';
 import '../pages/kulipia_bill.dart';
 import '../pages/toa_pesa.dart';
+import '../pages/tuma_kwend_nje.dart';
 import '../pages/tuma_pesa.dart';
 
 class ServicePanel extends StatefulWidget {
@@ -68,6 +70,9 @@ class _ServicePanelState extends State<ServicePanel> {
                           break;
                         case 'Huduma za Kifedha':
                           nextScreen(context, const HudumaZaKifedhaScreen());
+                          break;
+                        case 'Tuma Nje ya Nchi':
+                          nextScreen(context, const TumaKwendaNjeScreen());
                           break;
                         default:
                       }
@@ -212,17 +217,11 @@ class _ServicePanelState extends State<ServicePanel> {
                 const Text(
                   "Chagua Huduma za Malipo",
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.black,
-                      fontWeight: FontWeight.w500),
+                  style: titleStyle,
                 ),
                 const SizedBox(height: 4),
                 Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(3),
-                      border:
-                          Border.all(color: AppColors.primaryColor, width: 1)),
+                  decoration: containerstyle,
                   child: DropdownButtonFormField<String>(
                     value: dropdownValue,
                     hint: const Text(
@@ -258,18 +257,16 @@ class _ServicePanelState extends State<ServicePanel> {
                 Column(
                   children: [
                     const Text("Ingiza Namba ya Biashara",
-                        textAlign: TextAlign.center),
+                        style: titleStyle, textAlign: TextAlign.center),
                     const SizedBox(height: 5),
                     Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(3),
-                            border: Border.all(
-                                color: AppColors.primaryColor, width: 1)),
+                        decoration: containerstyle,
                         child: TextFormField(
-                          decoration: const InputDecoration(
+                          decoration: InputDecoration(
                             hintText:
                                 'Ingiza tarakimu 7 au 8 za mfanyabiashara',
-                            hintStyle: TextStyle(color: AppColors.primaryColor),
+                            hintStyle: TextStyle(
+                                color: AppColors.primaryColor.withOpacity(0.7)),
                             border: InputBorder.none,
                             focusedBorder: InputBorder.none,
                             enabledBorder: InputBorder.none,

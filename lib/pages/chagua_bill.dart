@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tigo_pesa/utils/helpers.dart';
+import 'package:tigo_pesa/utils/text_styles.dart';
 
 import '../utils/colors.dart';
 import '../widgets/appBar.dart';
@@ -79,14 +80,12 @@ class _ChaguaBillScreenState extends State<ChaguaBillScreen> {
                   const EdgeInsets.symmetric(horizontal: 18.0, vertical: 15),
               child: Column(children: [
                 Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        border: Border.all(
-                            color: AppColors.primaryColor, width: 2)),
+                    decoration: containerstyle,
                     child: TextFormField(
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         hintText: 'Tafuta kwa namba ya bili au jina',
-                        hintStyle: TextStyle(color: AppColors.primaryColor),
+                        hintStyle: TextStyle(
+                            color: AppColors.primaryColor.withOpacity(0.7)),
                         border: InputBorder.none,
                         focusedBorder: InputBorder.none,
                         enabledBorder: InputBorder.none,

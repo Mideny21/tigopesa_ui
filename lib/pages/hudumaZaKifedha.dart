@@ -86,7 +86,7 @@ class _HudumaZaKifedhaScreenState extends State<HudumaZaKifedhaScreen> {
                                   style: TextStyle(
                                       fontSize: 15, color: Colors.black54),
                                 ),
-                                SizedBox(height: 8),
+                                const SizedBox(height: 8),
                                 CustomButton(
                                     height: 35,
                                     fontSize: 14,

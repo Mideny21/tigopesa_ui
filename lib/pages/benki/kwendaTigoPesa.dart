@@ -3,6 +3,7 @@ import 'package:tigo_pesa/widgets/appBar.dart';
 import 'package:tigo_pesa/widgets/custom_button.dart';
 
 import '../../utils/colors.dart';
+import '../../utils/text_styles.dart';
 
 class BenkiKwendaTigoPesa extends StatefulWidget {
   const BenkiKwendaTigoPesa({super.key});
@@ -42,10 +43,7 @@ class _BenkiKwendaTigoPesaState extends State<BenkiKwendaTigoPesa> {
                       ),
                       const SizedBox(height: 8),
                       Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(3),
-                            border: Border.all(
-                                color: AppColors.primaryColor, width: 1)),
+                        decoration: containerstyle,
                         child: DropdownButtonFormField<String>(
                           value: dropdownValue,
                           hint: const Text(
@@ -93,7 +91,8 @@ class _BenkiKwendaTigoPesaState extends State<BenkiKwendaTigoPesa> {
                             });
                           },
                           decoration: InputDecoration(
-                            hintStyle: TextStyle(color: AppColors.primaryColor),
+                            hintStyle: TextStyle(
+                                color: AppColors.primaryColor.withOpacity(0.7)),
                             border: InputBorder.none,
                             focusedBorder: InputBorder.none,
                             enabledBorder: InputBorder.none,
