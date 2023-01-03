@@ -13,8 +13,9 @@ class MainsScreen extends StatefulWidget {
 }
 
 class _MainsScreenState extends State<MainsScreen> {
-  late List<Widget> _pages;
   int _selectedIndex = 0;
+  final _page1 = GlobalKey<NavigatorState>();
+  final _page2 = GlobalKey<NavigatorState>();
 
   void _onItemTapped(int index) {
     setState(() {
@@ -23,31 +24,27 @@ class _MainsScreenState extends State<MainsScreen> {
   }
 
   @override
-  void initState() {
-    super.initState();
-
-    _pages = [
-      const HomeScreen(),
-      const HudumaScreen(),
-    ];
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar(
-        title: 'TigoPesa',
-        actions: [
-          IconButton(
-              icon: const Icon(Icons.star_border_sharp, color: Colors.amber),
-              onPressed: () {}),
-          IconButton(
-              icon: const Icon(Icons.bookmark_outline_outlined,
-                  color: Colors.amber),
-              onPressed: () {}),
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: <Widget>[
+          Navigator(
+            key: _page1,
+            onGenerateRoute: (route) => MaterialPageRoute(
+              settings: route,
+              builder: (context) => const HomeScreen(),
+            ),
+          ),
+          Navigator(
+            key: _page2,
+            onGenerateRoute: (route) => MaterialPageRoute(
+              settings: route,
+              builder: (context) => const HudumaScreen(),
+            ),
+          ),
         ],
       ),
-      body: IndexedStack(index: _selectedIndex, children: _pages),
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -69,7 +66,7 @@ class _MainsScreenState extends State<MainsScreen> {
         unselectedLabelStyle: const TextStyle(color: Colors.white),
         backgroundColor: AppColors.primaryColor,
         selectedIconTheme: const IconThemeData(color: AppColors.yellowColors),
-        // type: BottomNavigationBarType.fixed,
+        type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.white,
         selectedLabelStyle: TextStyle(
             fontWeight: FontWeight.bold,

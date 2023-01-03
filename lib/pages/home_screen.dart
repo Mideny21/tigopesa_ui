@@ -5,6 +5,7 @@ import 'package:tigo_pesa/utils/colors.dart';
 import '../components/service_panel.dart';
 import '../components/slider_ad.dart';
 import '../utils/text_styles.dart';
+import '../widgets/appBar.dart';
 import '../widgets/custom_button.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -18,6 +19,19 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: MyAppBar(
+        title: 'TigoPesa',
+        actions: [
+          IconButton(
+              icon: const Icon(Icons.star_border_sharp,
+                  color: AppColors.yellowColors),
+              onPressed: () {}),
+          IconButton(
+              icon: const Icon(Icons.bookmark_outline_outlined,
+                  color: Colors.amber),
+              onPressed: () {}),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
