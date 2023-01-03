@@ -23,7 +23,16 @@ class _ChaguaBillScreenState extends State<ChaguaBillScreen> {
     {'name': "ELIFE", 'number': '889900'},
     {'name': "Air Tanzania", 'number': '787878'},
     {'name': "GCSTanzania Ltd", 'number': '006688'},
-    {'name': "D Light Tz", 'number': '250011'}
+    {'name': "D Light Tz", 'number': '250011'},
+    {'name': "MOBISOL", 'number': '800200'},
+    {'name': "Precision Air", 'number': '333777'},
+    {'name': "4Pesa Limited", 'number': '444441'},
+    {'name': "A One Product Ltd", 'number': '444444'},
+    {'name': "AA TANCH", 'number': '267891'},
+    {'name': "AAR Insurance", 'number': '761676'},
+    {'name': "Ada Lipa", 'number': '466466'},
+    {'name': "Afrobox", 'number': '334422'},
+    {'name': "AfyaCall Health Service", 'number': '349977'}
   ];
 
   @override

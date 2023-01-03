@@ -7,6 +7,9 @@ import 'package:tigo_pesa/widgets/custom_button.dart';
 import '../data/services.dart';
 import '../pages/benki/choosebank.dart';
 import '../pages/chagua_bill.dart';
+import '../pages/duka_la_tigo.dart';
+import '../pages/hudumaZaKifedha.dart';
+import '../pages/kulipia_bill.dart';
 import '../pages/toa_pesa.dart';
 import '../pages/tuma_pesa.dart';
 
@@ -59,6 +62,12 @@ class _ServicePanelState extends State<ServicePanel> {
                           break;
                         case 'Kulipia Bili':
                           nextScreen(context, const ChaguaBillScreen());
+                          break;
+                        case 'Duka La tigo':
+                          nextScreen(context, const DukaLaTigoScreen());
+                          break;
+                        case 'Huduma za Kifedha':
+                          nextScreen(context, const HudumaZaKifedhaScreen());
                           break;
                         default:
                       }
@@ -126,7 +135,12 @@ class _ServicePanelState extends State<ServicePanel> {
                 color: AppColors.primaryColor),
             const SizedBox(height: 10),
             CustomButton(
-                tap: () {},
+                tap: () => nextScreen(
+                    context,
+                    KulipiaBillScreen(
+                      title: 'Malipo ya Serikali/ Goverments Payments',
+                      controlnumber: '001001',
+                    )),
                 text: 'INGIZA NAMBA YA MALIPO',
                 textColor: Colors.white,
                 color: Colors.greenAccent),

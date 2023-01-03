@@ -8,64 +8,87 @@ List<Map> services = [
     "image": "assets/images/dstv.jpeg",
     "secondary": "assets/images/dstvlogo.jpeg",
     "name": "Tuma Pesa",
-    "badge": false,
-    "function": (BuildContext context) =>
-        nextScreen(context, const TumePesaScreen()),
+    "badge": false
   },
   {
     "image": "assets/images/uhuru na umoja.jpeg",
     "secondary": "assets/images/gepg.png",
     "name": "Kulipia Bili",
-    "badge": false,
-    "function": null
+    "badge": false
   },
   {
     "image": "assets/images/mastaa shangwe.jpeg",
     "secondary": "assets/images/captain.jpeg",
     "name": "Benki",
-    "badge": false,
-    "function": null
+    "badge": false
   },
   {
     "image": "assets/images/vodabima.jpeg",
     "secondary": "assets/images/mpwa.png",
     "name": "Kutoa Pesa",
-    "badge": false,
-    "function": null
+    "badge": false
   },
   {
     "image": "assets/images/dstv.jpeg",
     "secondary": "assets/images/dstvlogo.jpeg",
     "name": "Malipo ya Serikali",
-    "badge": false,
-    "function": null
+    "badge": false
   },
   {
     "image": "assets/images/dstv.jpeg",
     "secondary": "assets/images/dstvlogo.jpeg",
     "name": "Lipa Kwa Simu",
-    "badge": true,
-    "function": null
+    "badge": true
   },
   {
     "image": "assets/images/dstv.jpeg",
     "secondary": "assets/images/dstvlogo.jpeg",
     "name": "Duka La tigo",
-    "badge": false,
-    "function": null
+    "badge": false
   },
   {
     "image": "assets/images/dstv.jpeg",
     "secondary": "assets/images/dstvlogo.jpeg",
     "name": "Tuma Nje ya Nchi",
-    "badge": false,
-    "function": null
+    "badge": false
   },
   {
     "image": "assets/images/dstv.jpeg",
     "secondary": "assets/images/dstvlogo.jpeg",
     "name": "Huduma za Kifedha",
-    "badge": true,
-    "function": null
+    "badge": true
   },
+];
+
+List<Map> dukalaTigoServices = [
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "Tuma Pesa",
+    "badge": false
+  },
+  {
+    "image": "assets/images/uhuru na umoja.jpeg",
+    "secondary": "assets/images/gepg.png",
+    "name": "Kulipia Bili",
+    "badge": false
+  },
+  {
+    "image": "assets/images/mastaa shangwe.jpeg",
+    "secondary": "assets/images/captain.jpeg",
+    "name": "Benki",
+    "badge": false
+  },
+  {
+    "image": "assets/images/vodabima.jpeg",
+    "secondary": "assets/images/mpwa.png",
+    "name": "Kutoa Pesa",
+    "badge": false
+  },
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "Malipo ya Serikali",
+    "badge": false
+  }
 ];

@@ -8,6 +8,8 @@ class CustomButton extends StatelessWidget {
   final VoidCallback tap;
   final String text;
   final bool leading;
+  final double height;
+  final double fontSize;
   final Color textColor;
 
   final Color color;
@@ -16,6 +18,8 @@ class CustomButton extends StatelessWidget {
     required this.tap,
     required this.text,
     this.leading = false,
+    this.height = 48,
+    this.fontSize = 16,
     this.textColor = Colors.blueGrey,
     this.color = AppColors.yellowColors,
   }) : super(key: key);
@@ -23,7 +27,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 48,
+      height: height,
       width: double.maxFinite,
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(5)),
       child: ElevatedButton.icon(
@@ -36,7 +40,7 @@ class CustomButton extends StatelessWidget {
         onPressed: tap,
         label: Text(text,
             style: TextStyle(
-                fontSize: 16,
+                fontSize: fontSize,
                 color: textColor,
                 // fontWeight: FontWeight.bold,
                 letterSpacing: 0.8)),
