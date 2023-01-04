@@ -40,7 +40,7 @@ class _MainsScreenState extends State<MainsScreen> {
             key: _page2,
             onGenerateRoute: (route) => MaterialPageRoute(
               settings: route,
-              builder: (context) => const HudumaScreen(),
+              builder: (context) => const JihudumieScreens(),
             ),
           ),
         ],
@@ -68,7 +68,7 @@ class _MainsScreenState extends State<MainsScreen> {
         selectedIconTheme: const IconThemeData(color: AppColors.yellowColors),
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.white,
-        selectedLabelStyle: TextStyle(
+        selectedLabelStyle: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 15,
             letterSpacing: 0.8,

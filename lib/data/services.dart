@@ -92,3 +92,99 @@ List<Map> dukalaTigoServices = [
     "badge": false
   }
 ];
+
+List<Map> tigopesa = [
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "Namba ya Siri",
+    "badge": false
+  },
+  {
+    "image": "assets/images/uhuru na umoja.jpeg",
+    "secondary": "assets/images/gepg.png",
+    "name": "Taarifa elektroniki",
+    "badge": false
+  },
+  {
+    "image": "assets/images/mastaa shangwe.jpeg",
+    "secondary": "assets/images/captain.jpeg",
+    "name": "Rudisha Muamala",
+    "badge": false
+  },
+  {
+    "image": "assets/images/vodabima.jpeg",
+    "secondary": "assets/images/mpwa.png",
+    "name": "Kazi Zangu",
+    "badge": false
+  },
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "Token za LUKU",
+    "badge": false
+  },
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "Namba Zangu",
+    "badge": false
+  },
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "Fungua Akaunti",
+    "badge": false
+  },
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "Pata tokeni",
+    "badge": false
+  }
+];
+
+List<Map> mipangilio = [
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "Vifaa vyangu",
+    "badge": false
+  },
+  {
+    "image": "assets/images/uhuru na umoja.jpeg",
+    "secondary": "assets/images/gepg.png",
+    "name": "Mipangilio wa",
+    "badge": false
+  },
+  {
+    "image": "assets/images/mastaa shangwe.jpeg",
+    "secondary": "assets/images/captain.jpeg",
+    "name": "Boresha programu",
+    "badge": false
+  },
+];
+
+List<Map> kituo = [
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "Huduma kwa..",
+    "badge": false
+  },
+  {
+    "image": "assets/images/uhuru na umoja.jpeg",
+    "secondary": "assets/images/gepg.png",
+    "name": "Taarifa",
+    "badge": false
+  },
+];
+
+List<Map> alika = [
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "Alika na Uzawadi..",
+    "badge": false
+  },
+];
