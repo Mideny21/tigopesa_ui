@@ -11,9 +11,9 @@ class AdvertisementPanel extends StatefulWidget {
 
 class _AdvertisementPanelState extends State<AdvertisementPanel> {
   final advertisements = [
-    "assets/images/dstvlogo.jpeg",
-    "assets/images/dstvlogo.jpeg",
-    "assets/images/dstvlogo.jpeg"
+    "assets/images/tigo2.jpg",
+    "assets/images/tigo3.jpg",
+    "assets/images/tigo4.jpg"
   ];
 
   final _pagecontroller = PageController();
@@ -35,7 +35,7 @@ class _AdvertisementPanelState extends State<AdvertisementPanel> {
                           margin: const EdgeInsets.symmetric(horizontal: 10),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(7),
-                            child: Image.asset(e, fit: BoxFit.cover),
+                            child: Image.asset(e, fit: BoxFit.fill),
                           ),
                         ),
                       ],

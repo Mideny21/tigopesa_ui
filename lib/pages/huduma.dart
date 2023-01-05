@@ -35,7 +35,7 @@ class _JihudumieScreensState extends State<JihudumieScreens> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "RAYMOND MWAIKASU",
+                                "JOHN DOE",
                                 style: TextStyle(
                                     fontSize: 19,
                                     color: AppColors.primaryColor,
@@ -43,7 +43,7 @@ class _JihudumieScreensState extends State<JihudumieScreens> {
                               ),
                               SizedBox(height: 10),
                               Text(
-                                "Prepaid: +255 767 108989",
+                                "Prepaid: +255 909 909098",
                                 style: TextStyle(
                                     fontSize: 16,
                                     color: Colors.grey,

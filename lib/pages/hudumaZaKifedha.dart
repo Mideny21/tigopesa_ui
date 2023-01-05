@@ -55,7 +55,7 @@ class _HudumaZaKifedhaScreenState extends State<HudumaZaKifedhaScreen> {
             child: SizedBox(
               height: MediaQuery.of(context).size.height * 0.32,
               width: MediaQuery.of(context).size.width,
-              child: Image.asset('assets/images/dstv.jpeg',
+              child: Image.asset('assets/images/bima.jpg',
                   height: 40, fit: BoxFit.cover),
             ),
           ),
@@ -96,8 +96,14 @@ class _HudumaZaKifedhaScreenState extends State<HudumaZaKifedhaScreen> {
                                     text: 'Piga Huduma kwa Wateja')
                               ],
                             )),
-                        const Expanded(
-                            flex: 2, child: Icon(Icons.person_outline_rounded))
+                        const SizedBox(width: 10),
+                        Expanded(
+                            flex: 2,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image.asset('assets/images/customer.png',
+                                  height: 120, fit: BoxFit.fill),
+                            ))
                       ]),
                 ),
               ))
