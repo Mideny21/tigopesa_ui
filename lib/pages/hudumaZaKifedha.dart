@@ -28,7 +28,7 @@ class _HudumaZaKifedhaScreenState extends State<HudumaZaKifedhaScreen> {
                 crossAxisCount: 2),
             shrinkWrap: true,
             physics: const ScrollPhysics(),
-            itemCount: dukalaTigoServices.length,
+            itemCount: hudumaZaKifedha.length,
             itemBuilder: ((context, index) {
               return Card(
                 elevation: 2,
@@ -38,11 +38,15 @@ class _HudumaZaKifedhaScreenState extends State<HudumaZaKifedhaScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Image.asset(services[index]['image'],
-                          height: 40, fit: BoxFit.cover),
+                      hudumaZaKifedha[index]['name'] == 'visa'
+                          ? Image.asset(hudumaZaKifedha[index]['image'],
+                              height: 80, fit: BoxFit.cover)
+                          : hudumaZaKifedha[index]['icon'],
                       const SizedBox(height: 10),
-                      Text(services[index]['name'],
-                          overflow: TextOverflow.ellipsis),
+                      hudumaZaKifedha[index]['name'] == 'visa'
+                          ? Container()
+                          : Text(hudumaZaKifedha[index]['name'],
+                              overflow: TextOverflow.ellipsis),
                     ],
                   ),
                 ),
@@ -53,12 +57,13 @@ class _HudumaZaKifedhaScreenState extends State<HudumaZaKifedhaScreen> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: SizedBox(
-              height: MediaQuery.of(context).size.height * 0.32,
+              height: MediaQuery.of(context).size.height * 0.45,
               width: MediaQuery.of(context).size.width,
               child: Image.asset('assets/images/bima.jpg',
-                  height: 40, fit: BoxFit.cover),
+                  height: 100, fit: BoxFit.cover),
             ),
           ),
+          const SizedBox(height: 15),
           SizedBox(
               height: MediaQuery.of(context).size.height * 0.16,
               child: Card(

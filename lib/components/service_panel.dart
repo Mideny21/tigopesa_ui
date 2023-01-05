@@ -38,7 +38,7 @@ class _ServicePanelState extends State<ServicePanel> {
         itemCount: services.length,
         itemBuilder: ((context, index) {
           return Padding(
-            padding: const EdgeInsets.all(5.0),
+            padding: const EdgeInsets.all(2.0),
             child: Stack(
               alignment: Alignment.center,
               children: [
@@ -85,11 +85,24 @@ class _ServicePanelState extends State<ServicePanel> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Image.asset(services[index]['image'],
-                                height: 40, fit: BoxFit.cover),
+                            services[index]['image'] != null
+                                ? Image.asset(services[index]['image'],
+                                    height: 40, fit: BoxFit.cover)
+                                : services[index]['icon'] == null
+                                    ? Container()
+                                    : services[index]['icon'],
                             const SizedBox(height: 10),
-                            Text(services[index]['name'],
-                                overflow: TextOverflow.ellipsis),
+                            services[index]['name'] == "Lipa Kwa Simu"
+                                ? Text(
+                                    "Lipa Kwa Simu",
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        color: AppColors.primaryColor
+                                            .withOpacity(0.8),
+                                        fontWeight: FontWeight.bold),
+                                  )
+                                : Text(services[index]['name'],
+                                    overflow: TextOverflow.ellipsis),
                           ],
                         ),
                       ),

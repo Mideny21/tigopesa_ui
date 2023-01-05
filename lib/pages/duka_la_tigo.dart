@@ -79,7 +79,7 @@ class _DukaLaTigoScreenState extends State<DukaLaTigoScreen> {
                 crossAxisCount: 2),
             shrinkWrap: true,
             physics: const ScrollPhysics(),
-            itemCount: dukalaTigoServices.length,
+            itemCount: dukalaTigo.length,
             itemBuilder: ((context, index) {
               return Card(
                 elevation: 2,
@@ -89,10 +89,9 @@ class _DukaLaTigoScreenState extends State<DukaLaTigoScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Image.asset(services[index]['image'],
-                          height: 40, fit: BoxFit.cover),
+                      dukalaTigo[index]['icon'],
                       const SizedBox(height: 10),
-                      Text(services[index]['name'],
+                      Text(dukalaTigo[index]['name'],
                           overflow: TextOverflow.ellipsis),
                     ],
                   ),

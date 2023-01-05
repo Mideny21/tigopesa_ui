@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tigo_pesa/utils/colors.dart';
 import 'package:tigo_pesa/utils/helpers.dart';
 
 import '../../widgets/appBar.dart';
@@ -25,12 +26,12 @@ class _ChaguaBankState extends State<ChaguaBank> {
           children: [
             BankChoiceCard(
               tap: () => nextScreen(context, const TigoPesaKwendaBenki()),
-              icon: Icons.mark_email_read_outlined,
-              title: 'Tume Kwenda Benki',
+              icon: Icons.account_balance_outlined,
+              title: 'Tuma Kwenda Benki',
             ),
             BankChoiceCard(
               tap: () => nextScreen(context, const BenkiKwendaTigoPesa()),
-              icon: Icons.mark_email_read_outlined,
+              icon: Icons.account_balance_outlined,
               title: 'Benki kwenda Tigo Pesa',
             ),
           ],
@@ -54,19 +55,22 @@ class BankChoiceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.12,
+      height: MediaQuery.of(context).size.height * 0.14,
       width: MediaQuery.of(context).size.width * 1.0,
       child: InkWell(
         onTap: tap,
         child: Card(
-            elevation: 5,
+            elevation: 8,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(icon, size: 40),
+                Icon(icon, color: AppColors.primaryColor, size: 50),
                 const SizedBox(height: 5),
-                Text(title)
+                Text(
+                  title,
+                  style: TextStyle(color: AppColors.primaryColor, fontSize: 17),
+                )
               ],
             )),
       ),

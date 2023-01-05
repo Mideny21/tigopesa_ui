@@ -11,9 +11,9 @@ class AdvertisementPanel extends StatefulWidget {
 
 class _AdvertisementPanelState extends State<AdvertisementPanel> {
   final advertisements = [
-    "assets/images/tigo2.jpg",
+    "assets/images/tigo4.jpg",
     "assets/images/tigo3.jpg",
-    "assets/images/tigo4.jpg"
+    "assets/images/tigo2.jpg"
   ];
 
   final _pagecontroller = PageController();

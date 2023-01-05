@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
               padding:
                   const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
               child: CustomButton(
-                  color: AppColors.yellowColors,
+                  color: AppColors.yellowColors.withOpacity(0.8),
                   leading: true,
                   textColor: AppColors.primaryColor,
                   tap: () => checkBalance(context),
