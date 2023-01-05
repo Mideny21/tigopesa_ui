@@ -153,15 +153,16 @@ class _ServicePanelState extends State<ServicePanel> {
                 color: AppColors.primaryColor),
             const SizedBox(height: 10),
             CustomButton(
-                tap: () => nextScreen(
-                    context,
-                    KulipiaBillScreen(
-                      title: 'Malipo ya Serikali/ Goverments Payments',
-                      controlnumber: '001001',
-                    )),
-                text: 'INGIZA NAMBA YA MALIPO',
-                textColor: Colors.white,
-                color: Colors.greenAccent),
+              tap: () => nextScreen(
+                  context,
+                  KulipiaBillScreen(
+                    title: 'Malipo ya Serikali/ Goverments Payments',
+                    controlnumber: '001001',
+                  )),
+              text: 'INGIZA NAMBA YA MALIPO',
+              textColor: Colors.white,
+              color: AppColors.greenButtonColor,
+            ),
             const SizedBox(height: 10),
             CustomButton(
                 tap: () {
@@ -196,10 +197,11 @@ class _ServicePanelState extends State<ServicePanel> {
                 color: AppColors.primaryColor),
             const SizedBox(height: 10),
             CustomButton(
-                tap: () => ingizaNambaYaBiasharaDialog(context),
-                text: 'INGIZA NAMBA YA BIASHARA',
-                textColor: Colors.white,
-                color: Colors.greenAccent),
+              tap: () => ingizaNambaYaBiasharaDialog(context),
+              text: 'INGIZA NAMBA YA BIASHARA',
+              textColor: Colors.white,
+              color: AppColors.greenButtonColor,
+            ),
             const SizedBox(height: 10),
             CustomButton(
                 tap: () {
@@ -314,7 +316,7 @@ class _ServicePanelState extends State<ServicePanel> {
                     child: CustomButton(
                       tap: () {},
                       text: 'THIBITISHA',
-                      color: Colors.green,
+                      color: AppColors.greenButtonColor,
                       textColor: Colors.white,
                     )),
               ],

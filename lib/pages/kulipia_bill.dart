@@ -113,7 +113,7 @@ class _KulipiaBillScreenState extends State<KulipiaBillScreen> {
 
                       CustomButton(
                           textColor: Colors.white,
-                          color: Colors.green,
+                          color: AppColors.greenButtonColor,
                           tap: () {},
                           text: "ENDELEA")
                     ],

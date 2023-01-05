@@ -165,7 +165,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: CustomButton(
                       tap: () => showBalance(context),
                       text: 'THIBITISHA',
-                      color: Colors.green,
+                      color: AppColors.greenButtonColor,
                       textColor: Colors.white,
                     )),
               ],

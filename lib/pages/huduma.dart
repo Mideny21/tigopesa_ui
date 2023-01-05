@@ -50,12 +50,24 @@ class _JihudumieScreensState extends State<JihudumieScreens> {
                                     fontWeight: FontWeight.w400),
                               ),
                               SizedBox(height: 10),
-                              Text(
-                                "Barua Pepe:",
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.grey,
-                                    fontWeight: FontWeight.w400),
+                              Row(
+                                children: [
+                                  Text(
+                                    "Barua Pepe:",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: Colors.grey,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                  SizedBox(width: 5),
+                                  Text(
+                                    "(Barua pe...",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 16,
+                                        color: AppColors.primaryColor),
+                                  )
+                                ],
                               ),
                               SizedBox(height: 10),
                               Text(

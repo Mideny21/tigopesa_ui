@@ -14,7 +14,8 @@ class TumaKwendaNjeScreen extends StatefulWidget {
 }
 
 class _TumaKwendaNjeScreenState extends State<TumaKwendaNjeScreen> {
-  String dropdownValue = 'Tigo Pesa';
+  String dropdownValue = 'Kenya';
+  String dropdownValue1 = 'Tigo Pesa';
 
   @override
   void initState() {
@@ -76,9 +77,16 @@ class _TumaKwendaNjeScreenState extends State<TumaKwendaNjeScreen> {
                                 textAlign: TextAlign.center,
                               ),
                               items: <String>[
-                                'Tigo Pesa',
-                                'M-Pesa',
-                                'Master Card'
+                                'Botswana',
+                                'Burundi',
+                                'DRC',
+                                'Kenya',
+                                'Malawi',
+                                'Mozambique',
+                                'Rwanda',
+                                'South Sudan',
+                                'Uganda',
+                                'Zambia'
                               ].map<DropdownMenuItem<String>>((String value) {
                                 return DropdownMenuItem<String>(
                                   value: value,
@@ -125,9 +133,9 @@ class _TumaKwendaNjeScreenState extends State<TumaKwendaNjeScreen> {
                                 Icons.keyboard_arrow_down_rounded,
                                 size: 26,
                               ),
-                              value: dropdownValue,
+                              value: dropdownValue1,
                               hint: const Text(
-                                'Chagua Nchi',
+                                'Chagua Mtandao',
                                 textAlign: TextAlign.center,
                               ),
                               items: <String>[
@@ -142,7 +150,7 @@ class _TumaKwendaNjeScreenState extends State<TumaKwendaNjeScreen> {
                               }).toList(),
                               onChanged: (String? newValue) {
                                 setState(() {
-                                  dropdownValue = newValue!;
+                                  dropdownValue1 = newValue!;
                                 });
                               },
                               decoration: InputDecoration(
@@ -196,7 +204,7 @@ class _TumaKwendaNjeScreenState extends State<TumaKwendaNjeScreen> {
                       // const SizedBox(height: 200),
                       CustomButton(
                           textColor: Colors.white,
-                          color: Colors.green,
+                          color: AppColors.greenButtonColor,
                           tap: () {},
                           text: "ENDELEA")
                     ],

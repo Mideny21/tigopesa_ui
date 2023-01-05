@@ -112,7 +112,7 @@ class _BenkiKwendaTigoPesaState extends State<BenkiKwendaTigoPesa> {
                   CustomButton(
                     tap: () {},
                     text: 'ENDELEA',
-                    color: Colors.green,
+                    color: AppColors.greenButtonColor,
                     textColor: Colors.white,
                   )
                 ]),

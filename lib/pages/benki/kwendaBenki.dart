@@ -124,7 +124,7 @@ class _TigoPesaKwendaBenkiState extends State<TigoPesaKwendaBenki> {
                     // const SizedBox(height: 200),
                     CustomButton(
                         textColor: Colors.white,
-                        color: Colors.green,
+                        color: AppColors.greenButtonColor,
                         tap: () {},
                         text: "ENDELEA")
                   ],
